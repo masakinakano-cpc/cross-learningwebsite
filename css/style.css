@@ -117,4 +117,10 @@ header {
 .animate-on-scroll {
     animation: fadeInUp 0.8s ease-out forwards; 
     opacity: 0; 
+}
+
+/* スムーズスクロール用の調整 */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* ヘッダーの高さ分の調整 */
 } 
