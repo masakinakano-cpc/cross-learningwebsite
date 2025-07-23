@@ -1,0 +1,892 @@
+/* アンサーセクション */
+.answer-section {
+    background: white;
+    padding: 5rem 0;
+    border-left: 6px solid #1A4F8A; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+    position: relative;
+    overflow: hidden;
+}
+
+.answer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://via.placeholder.com/1920x1080?text=eラーニングシステム画面、データ分析のイメージ') center/cover no-repeat;
+    opacity: 0.05;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.answer-box {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); 
+    padding: 2.5rem;
+    border-radius: 18px; 
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15); 
+    margin-bottom: 3rem;
+    border: 1px solid #90CAF9; 
+    position: relative;
+    z-index: 1;
+}
+
+.answer-title {
+    font-size: 2.2rem;
+    color: #1A4F8A; 
+    margin-bottom: 1.5rem;
+    font-weight: 700; 
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.answer-title::before {
+    content: '✓'; 
+    position: absolute;
+    left: 0;
+    color: #FF6B35; 
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.answer-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    color: #444;
+    font-weight: 400;
+}
+
+.answer-text strong {
+    color: #1A4F8A; 
+    font-weight: 700;
+}
+
+.highlight-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FF6B35;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+.stat-label {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* 特徴セクション */
+.features {
+    padding: 5.5rem 0;
+    background: linear-gradient(45deg, #E0F2F7 0%, #C1DCE7 100%); 
+    box-shadow: inset 0 3px 10px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://via.placeholder.com/1920x1080?text=オフィスで働く人々、効率化された業務風景') center/cover no-repeat;
+    opacity: 0.08;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.features .container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: #1A4F8A;
+    position: relative;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FF6B35; 
+    border-radius: 2px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2.5rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 18px; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #FF6B35; 
+}
+
+.feature-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #2196F3; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1A4F8A;
+    font-weight: 700;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    font-weight: 400;
+}
+
+.feature-category-title {
+    font-size: 2rem;
+    color: #1A4F8A;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.feature-category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #2196F3;
+    border-radius: 1.5px;
+}
+
+/* 派遣会社の声セクション */
+.voice-section {
+    padding: 5.5rem 0;
+    background: linear-gradient(135deg, #F8FBFC 0%, #EEF7FF 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.voice-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://via.placeholder.com/1920x1080?text=多様な業界の派遣会社担当者が満足げな表情で話しているイメージ') center/cover no-repeat;
+    opacity: 0.07;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.voice-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.voice-section h2 {
+    font-size: 2.5rem;
+    color: #1A4F8A;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+
+.voice-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FF6B35;
+    border-radius: 2px;
+}
+
+.voice-section p.lead {
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 3.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+}
+
+.voice-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.voice-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: left;
+    border-bottom: 5px solid #2196F3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.voice-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.voice-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/400x300?text=ビジネスミーティングの様子、効率化を示すアイコンの抽象画') center/cover no-repeat;
+    opacity: 0.05;
+    filter: grayscale(100%);
+    z-index: 0;
+    transition: opacity 0.3s ease;
+}
+
+.voice-card:hover::before {
+    opacity: 0.1;
+}
+
+.voice-card .card-icon {
+    font-size: 2.5rem;
+    color: #FF6B35;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.voice-card h3 {
+    font-size: 1.3rem;
+    color: #1A4F8A;
+    margin-bottom: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+}
+
+.voice-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.voice-card ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+    font-weight: 400;
+}
+
+.voice-card ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #28A745;
+    font-weight: bold;
+}
+
+.voice-card p.solution-text {
+    font-size: 1rem;
+    color: #1A4F8A;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* 比較セクション */
+.comparison {
+    padding: 5.5rem 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.comparison::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://via.placeholder.com/1920x1080?text=グラフやデータ比較の抽象的なイメージ') center/cover no-repeat;
+    opacity: 0.04;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.comparison .container {
+    position: relative;
+    z-index: 1;
+}
+
+.comparison-table {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.15); 
+    margin: 3rem 0;
+    border: 1px solid #e0e0e0;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table th {
+    background: linear-gradient(135deg, #1A4F8A 0%, #0D2A54 100%);
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    white-space: nowrap; 
+}
+
+.comparison-table td {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    color: #444;
+    font-weight: 400;
+}
+
+.comparison-table tr:nth-child(even) {
+    background: #f8f9fa; 
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none; 
+}
+
+.check-mark {
+    color: #28A745; 
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.cross-mark {
+    color: #DC3545; 
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.highlight-col {
+    background: linear-gradient(135deg, #E6F7FF 0%, #CCEFFF 100%) !important; 
+    font-weight: 700;
+    color: #1A4F8A;
+}
+
+/* FAQセクション */
+.faq {
+    padding: 5.5rem 0;
+    background: linear-gradient(135deg, #F0F8FF 0%, #E6F7FF 100%); 
+    box-shadow: inset 0 3px 10px rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.faq::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://via.placeholder.com/1920x1080?text=質問アイコンや吹き出しの抽象的なイメージ') center/cover no-repeat;
+    opacity: 0.06;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.faq .container {
+    position: relative;
+    z-index: 1;
+}
+
+.faq-item {
+    background: white;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    background: linear-gradient(135deg, #F8FCFF 0%, #EEF7FF 100%); 
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1A4F8A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-item.active .faq-question {
+    border-bottom: 1px solid #d0d0d0; 
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; 
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.faq-answer.active {
+    padding: 1.5rem;
+    max-height: 500px; 
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    color: #2196F3; 
+}
+
+.faq-toggle.active {
+    transform: rotate(45deg);
+    color: #FF6B35; 
+}
+
+/* 導入事例セクション */
+.case-studies {
+    padding: 5.5rem 0;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.case-studies::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/1920x1080?text=成功事例を示すグラフや、協業のイメージ') center/cover no-repeat;
+    opacity: 0.1;
+    filter: grayscale(80%) brightness(1.2);
+    z-index: 0;
+}
+
+.case-studies .container {
+    position: relative;
+    z-index: 1;
+}
+
+.case-studies .feature-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(220, 220, 220, 0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.case-studies .feature-card:hover {
+    box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+}
+
+.case-studies .feature-icon {
+    color: #1A4F8A;
+}
+
+.case-studies .btn-text {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.case-studies .btn-text:hover {
+    color: #1a4f8a;
+    text-decoration: underline;
+}
+
+/* CTAセクション */
+.cta-section {
+    background: linear-gradient(135deg, #1A4F8A 0%, #0D2A54 100%); 
+    color: white;
+    padding: 5.5rem 0;
+    text-align: center;
+    box-shadow: inset 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://via.placeholder.com/1920x1080?text=担当者が笑顔で顧客と話しているイメージ、成功を示す抽象的なアイコン') center/cover no-repeat;
+    opacity: 0.15;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.cta-content p {
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #FF6B35, #F7931E);
+    color: white;
+    padding: 1rem 2.2rem;
+    border: none;
+    border-radius: 35px; 
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    white-space: nowrap; 
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 1rem 2.2rem;
+    border: 3px solid white; 
+    border-radius: 35px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap; 
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
+    filter: brightness(1.1);
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #1A4F8A; 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+}
+
+/* フッター */
+footer {
+    background: #222; 
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* 講座セクション */
+.courses {
+    padding: 5.5rem 0;
+    background: linear-gradient(135deg, #F8FBFC 0%, #EEF7FF 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.courses::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://via.placeholder.com/1920x1080?text=多様な講座アイコンや学習コンテンツの抽象的なイメージ') center/cover no-repeat;
+    opacity: 0.06;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.courses .container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.course-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-left: 5px solid #2196F3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.course-category h3 {
+    font-size: 1.3rem;
+    color: #1A4F8A;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.course-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-category ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+    font-weight: 400;
+}
+
+.course-category ul li:last-child {
+    border-bottom: none;
+}
+
+/* 料金セクション */
+.pricing {
+    padding: 5.5rem 0;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://via.placeholder.com/1920x1080?text=料金表やコスト比較の抽象的なイメージ') center/cover no-repeat;
+    opacity: 0.04;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.pricing .container {
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.pricing-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.pricing-card.featured {
+    border-color: #FF6B35;
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(255, 107, 53, 0.2);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    color: #1A4F8A;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FF6B35;
+    margin-bottom: 1rem;
+}
+
+.price-description {
+    color: #666;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.pricing-card ul li {
+    padding: 0.5rem 0;
+    color: #555;
+    font-weight: 400;
+}
+
+.pricing-note {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 5px solid #FF6B35;
+}
+
+.pricing-note p {
+    margin-bottom: 1rem;
+    color: #555;
+    font-weight: 400;
+} 
