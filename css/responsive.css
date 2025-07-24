@@ -70,7 +70,12 @@
     .course-category h3 { font-size: 1.2rem; }
     .pricing-card h3 { font-size: 1.3rem; }
     .price { font-size: 1.6rem; }
-    .main-content-intro, .answer-section, .features, .voice-section, .comparison, .faq, .case-studies, .cta-section, .client-logos, .courses, .pricing {
+    .news-grid { grid-template-columns: 1fr; }
+    .news-item { padding: 1.5rem; }
+    .news-title { font-size: 1.1rem; }
+    .news-pagination { flex-wrap: wrap; }
+    .page-link { width: 35px; height: 35px; font-size: 0.9rem; }
+    .main-content-intro, .answer-section, .features, .voice-section, .comparison, .faq, .case-studies, .cta-section, .client-logos, .courses, .pricing, .news-section {
         padding: 4rem 0; 
     }
 } 
