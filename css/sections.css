@@ -73,7 +73,7 @@
 
 /* メインコンテンツ導入セクション */
 .main-content-intro {
-    background: linear-gradient(135deg, #3F51B5 0%, #283593 100%);
+    background: #1A4F8A;
     color: white;
     padding: 6rem 0;
     text-align: center;
@@ -148,21 +148,21 @@
 }
 
 .main-content-intro .btn-primary { 
-    background: linear-gradient(45deg, #FF6B35, #F7931E);
-    color: white;
+    background: #fff;
+    color: #1A4F8A;
     padding: 1rem 2.2rem;
     border: none;
-    border-radius: 35px;
+    border-radius: 5px;
     font-size: 1.15rem;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     white-space: nowrap;
 }
 
 .main-content-intro .btn-primary:hover { 
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
-    filter: brightness(1.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background: #f8f9fa;
 } 

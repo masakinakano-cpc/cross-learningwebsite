@@ -44,6 +44,16 @@
     .logo { font-size: 1.6rem; }
     .cta-button { padding: 0.6rem 1.2rem; font-size: 0.8rem; }
     .nav-menu { display: none; } /* モバイルではナビゲーションを非表示 */
+    .dropdown-content { 
+        position: static; 
+        box-shadow: none; 
+        border-radius: 0; 
+        min-width: auto; 
+    }
+    .dropdown-content a { 
+        padding: 8px 16px; 
+        border-bottom: 1px solid #e0e0e0; 
+    }
     .section-title { font-size: 1.6rem; }
     .answer-title { font-size: 1.6rem; }
     .feature-title { font-size: 1.2rem; }
