@@ -35,14 +35,21 @@
     .voice-section p.lead { font-size: 1rem; margin-bottom: 2.5rem; }
     .pricing-card.featured { transform: none; }
     .pricing-card.featured:hover { transform: translateY(-10px); }
+    
+    /* ヘッダー調整 */
+    .nav-menu a { font-size: 0.85rem; }
+    .cta-button { font-size: 0.85rem; padding: 0.6rem 1.2rem; }
+    .logo { font-size: 1.8rem; }
 }
 
 @media (max-width: 480px) {
     .main-hero-swiper-container { height: 250px; }
     .main-content-intro h1 { font-size: 1.8rem; }
     .main-content-intro p.intro-subtitle { font-size: 0.9rem; }
-    .logo { font-size: 1.6rem; }
-    .cta-button { padding: 0.6rem 1.2rem; font-size: 0.8rem; }
+    .logo { font-size: 1.5rem; }
+    .cta-button { padding: 0.5rem 1rem; font-size: 0.8rem; }
+    .nav-menu { gap: 1rem; }
+    .nav-menu a { font-size: 0.8rem; }
     .nav-menu { display: none; } /* モバイルではナビゲーションを非表示 */
     .dropdown-content { 
         position: static; 
