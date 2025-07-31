@@ -420,6 +420,21 @@
     line-height: 1.6;
 }
 
+.comparison-notes {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.comparison-notes p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
 /* 導入企業ロゴスライダーセクション */
 .client-logos {
     background: #F0F4F8;
