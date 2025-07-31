@@ -226,14 +226,14 @@
 
 /* プレミアムプラン */
 .premium-plan {
-    border-color: #FF6B35;
-    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    border-color: #1A4F8A;
+    background: linear-gradient(135deg, #E8F4FD 0%, #D1E7FF 100%);
 }
 
 /* ショートプラン */
 .short-plan {
-    border-color: #9E9E9E;
-    background: linear-gradient(135deg, #F5F5F5 0%, #EEEEEE 100%);
+    border-color: #6C757D;
+    background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
 }
 
 .plan-header {
@@ -270,6 +270,14 @@
     color: #555;
     font-weight: 500;
     margin: 0;
+}
+
+.plan-target {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 400;
+    margin: 0.5rem 0 0 0;
+    font-style: italic;
 }
 
 .plan-features {
@@ -401,15 +409,15 @@
 
 /* プラン列の色分け */
 .trial-col {
-    background: rgba(33, 150, 243, 0.05);
+    background: rgba(33, 150, 243, 0.08);
 }
 
 .premium-col {
-    background: rgba(255, 107, 53, 0.05);
+    background: rgba(26, 79, 138, 0.08);
 }
 
 .short-col {
-    background: rgba(158, 158, 158, 0.05);
+    background: rgba(108, 117, 125, 0.08);
 }
 
 .comparison-note {
@@ -422,17 +430,27 @@
 
 .comparison-notes {
     margin-top: 2rem;
-    padding: 1.5rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
 }
 
 .comparison-notes p {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.5;
+    margin: 0.8rem 0;
+    font-size: 0.85rem;
+    color: #6c757d;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.comparison-notes p::before {
+    content: "※";
+    position: absolute;
+    left: 0;
+    color: #495057;
+    font-weight: 600;
 }
 
 /* 導入企業ロゴスライダーセクション */
