@@ -24,322 +24,336 @@
     background-blend-mode: normal;
 }
 
-/* 料金プランセクション */
-.pricing-section {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #F8FBFF 0%, #E3F2FD 100%);
-}
+/* 料金ページ専用スタイル */
 
-.pricing-section .section-header {
+/* ヒーローヘッダーセクション */
+.pricing-hero {
+    background: linear-gradient(135deg, #1A4F8A 0%, #0D2A54 100%);
+    padding: 5rem 0;
     text-align: center;
-    margin-bottom: 3rem;
-}
-
-.pricing-section .section-title {
-    font-size: 2.5rem;
-    color: #1A4F8A;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.pricing-section .section-subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2rem;
-}
-
-.initial-cost-banner {
-    background: linear-gradient(135deg, #4CAF50 0%, #45A049 100%);
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
-    margin-top: 1rem;
-}
-
-.initial-cost-banner i {
-    font-size: 1.2rem;
-}
-
-.pricing-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.pricing-card {
-    background: white;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-.pricing-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.pricing-card.trial-plan {
-    border: 3px solid #2196F3;
-}
-
-.pricing-card.standard-plan {
-    border: 3px solid #FF9800;
-}
-
-.pricing-card.standard-plan::before {
-    content: '推奨';
+.pricing-hero::before {
+    content: '';
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #FF9800;
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.pricing-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+    color: #E3F2FD;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.hero-buttons .btn-primary {
+    background: #FF6B35;
+    color: white;
+    border: 2px solid #FF6B35;
+}
+
+.hero-buttons .btn-primary:hover {
+    background: #E55A2B;
+    border-color: #E55A2B;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.hero-buttons .btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.hero-buttons .btn-secondary:hover {
+    background: white;
+    color: #1A4F8A;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* プランカードセクション */
+.pricing-plans {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* お試しプラン（最も目立たせる） */
+.trial-plan {
+    border-color: #2196F3;
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+}
+
+.trial-plan .plan-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #FF6B35;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+}
+
+/* プレミアムプラン */
+.premium-plan {
+    border-color: #FF6B35;
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+}
+
+/* ショートプラン */
+.short-plan {
+    border-color: #9E9E9E;
+    background: linear-gradient(135deg, #F5F5F5 0%, #EEEEEE 100%);
 }
 
 .plan-header {
+    padding: 2rem;
     text-align: center;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .plan-header h3 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
     color: #1A4F8A;
-    margin-bottom: 1rem;
-    font-weight: 700;
 }
 
-.price {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 0.5rem;
+.plan-price {
     margin-bottom: 1rem;
 }
 
-.price .amount {
-    font-size: 2.5rem;
+.price-amount {
+    font-size: 3rem;
     font-weight: 700;
-    color: #2196F3;
+    color: #FF6B35;
+    display: block;
 }
 
-.price .period {
+.price-period {
     font-size: 1.1rem;
     color: #666;
 }
 
-.plan-badge {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: white;
-}
-
-.trial-plan .plan-badge {
-    background: #2196F3;
-}
-
-.standard-plan .plan-badge {
-    background: #FF9800;
+.plan-catch {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 500;
+    margin: 0;
 }
 
 .plan-features {
-    margin-bottom: 2rem;
+    padding: 2rem;
 }
 
 .plan-features ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .plan-features li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.8rem;
     margin-bottom: 1rem;
-    font-size: 1rem;
-    color: #333;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
 }
 
-.plan-features i {
+.plan-features i.fa-check {
     color: #4CAF50;
     font-size: 1.1rem;
     min-width: 20px;
+    margin-top: 0.1rem;
 }
 
-.plan-conditions {
-    background: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-}
-
-.plan-conditions p {
-    font-weight: 600;
-    color: #1A4F8A;
-    margin-bottom: 1rem;
-}
-
-.plan-conditions ul {
-    list-style: none;
-    padding: 0;
-}
-
-.plan-conditions li {
-    margin-bottom: 0.5rem;
-    color: #666;
-    font-size: 0.9rem;
+.plan-features i.fa-times {
+    color: #F44336;
+    font-size: 1.1rem;
+    min-width: 20px;
+    margin-top: 0.1rem;
 }
 
 .plan-footer {
+    padding: 2rem;
+    background: #f8f9fa;
     text-align: center;
+    border-top: 1px solid #e0e0e0;
 }
 
-.plan-footer .note {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+.plan-footer .btn-primary {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: #2196F3;
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    cursor: pointer;
-    font-size: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
+.plan-footer .btn-primary:hover {
+    background: #1976D2;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
 }
 
-.pricing-comparison {
-    margin-top: 4rem;
+.plan-note {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    font-style: italic;
 }
 
-.pricing-comparison h3 {
-    text-align: center;
-    font-size: 2rem;
-    color: #1A4F8A;
-    margin-bottom: 2rem;
-    font-weight: 700;
+/* 比較表セクション */
+.comparison-section {
+    padding: 5rem 0;
+    background: white;
 }
 
-.pricing-comparison .comparison-table {
+.comparison-table {
+    margin-top: 3rem;
+    overflow-x: auto;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
     background: white;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.pricing-comparison table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.pricing-comparison th {
+.comparison-table th {
     background: #1A4F8A;
     color: white;
     padding: 1.5rem 1rem;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
 }
 
-.pricing-comparison td {
-    padding: 1.2rem 1rem;
-    text-align: center;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 1rem;
+.comparison-table th:first-child {
+    text-align: left;
+    background: #0D2A54;
 }
 
-.pricing-comparison tr:nth-child(even) {
+.comparison-table td {
+    padding: 1.2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: middle;
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #1A4F8A;
     background: #f8f9fa;
 }
 
-.pricing-comparison tr:last-child td {
-    border-bottom: none;
-}
-
-.check-mark {
+.comparison-table i.fa-check {
     color: #4CAF50;
-    font-weight: 700;
     font-size: 1.2rem;
 }
 
-.cross-mark {
-    color: #f44336;
-    font-weight: 700;
+.comparison-table i.fa-times {
+    color: #F44336;
     font-size: 1.2rem;
 }
 
-.pricing-notes {
-    margin-top: 3rem;
+/* プラン列の色分け */
+.trial-col {
+    background: rgba(33, 150, 243, 0.05);
 }
 
-.note-box {
-    background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-left: 5px solid #2196F3;
+.premium-col {
+    background: rgba(255, 107, 53, 0.05);
 }
 
-.note-box h4 {
-    color: #1A4F8A;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.short-col {
+    background: rgba(158, 158, 158, 0.05);
 }
 
-.note-box h4 i {
-    color: #2196F3;
-}
-
-.note-box ul {
-    list-style: none;
-    padding: 0;
-}
-
-.note-box li {
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
-    position: relative;
+.comparison-note {
+    text-align: center;
+    margin-top: 2rem;
     color: #666;
-}
-
-.note-box li::before {
-    content: '•';
-    color: #2196F3;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 /* 導入企業ロゴスライダーセクション */
@@ -477,4 +491,86 @@
 .main-content-intro .btn-primary:hover { 
     transform: translateY(-3px);
     box-shadow: 0 12px 35px rgba(255, 152, 0, 0.4);
+} 
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .plans-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .trial-plan {
+        transform: none;
+    }
+    
+    .plan-card {
+        margin: 0 1rem;
+    }
+    
+    .price-amount {
+        font-size: 2.5rem;
+    }
+    
+    .comparison-table {
+        margin: 2rem -1rem;
+    }
+    
+    .comparison-table table {
+        font-size: 0.9rem;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-hero {
+        padding: 3rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .plan-features {
+        padding: 1.5rem;
+    }
+    
+    .plan-footer {
+        padding: 1.5rem;
+    }
+    
+    .price-amount {
+        font-size: 2rem;
+    }
+    
+    .comparison-table table {
+        font-size: 0.8rem;
+    }
 } 
