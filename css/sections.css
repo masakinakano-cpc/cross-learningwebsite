@@ -100,36 +100,42 @@
     box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
 }
 
-.highlight-banner h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.highlight-banner .main-price {
+    font-size: 4.5rem;
     font-weight: 700;
-}
-
-.highlight-banner p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    margin: 0;
-}
-
-.user-profiles {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.profile-circle {
-    width: 50px;
-    height: 50px;
-    background: #2196F3;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 0.5rem;
     color: white;
-    font-size: 1.2rem;
+    text-align: center;
 }
+
+.highlight-banner .price-period {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.highlight-banner .support-info {
+    text-align: center;
+}
+
+.highlight-banner .support-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.highlight-banner .support-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 0.8rem;
+    opacity: 0.9;
+}
+
+
 
 .hero-buttons {
     display: flex;
