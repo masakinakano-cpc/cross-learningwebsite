@@ -493,6 +493,144 @@
     box-shadow: 0 12px 35px rgba(255, 152, 0, 0.4);
 } 
 
+/* システム運用代行サービスセクション */
+.system-service {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+}
+
+.service-content {
+    text-align: center;
+}
+
+.service-highlight {
+    margin: 3rem 0;
+}
+
+.highlight-circle {
+    background: #FF6B35;
+    color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+.highlight-circle h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.service-features {
+    margin-top: 3rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: #2196F3;
+    margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+    color: #1A4F8A;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.feature-item p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* 他社比較セクション */
+.competitor-comparison {
+    padding: 5rem 0;
+    background: white;
+}
+
+.competitor-comparison .comparison-table {
+    margin-top: 3rem;
+}
+
+.competitor-comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.competitor-comparison th {
+    background: #1A4F8A;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.competitor-comparison th:first-child {
+    text-align: left;
+    background: #0D2A54;
+}
+
+.competitor-comparison td {
+    padding: 1.2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: middle;
+}
+
+.competitor-comparison td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #1A4F8A;
+    background: #f8f9fa;
+}
+
+.check-mark {
+    color: #4CAF50;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.cross-mark {
+    color: #F44336;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     .hero-title {
@@ -571,6 +709,59 @@
     }
     
     .comparison-table table {
+        font-size: 0.8rem;
+    }
+} 
+
+/* レスポンシブ対応の追加 */
+@media (max-width: 768px) {
+    .highlight-circle {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .highlight-circle h3 {
+        font-size: 1.1rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-item {
+        margin: 0 1rem;
+    }
+    
+    .competitor-comparison .comparison-table {
+        margin: 2rem -1rem;
+    }
+    
+    .competitor-comparison table {
+        font-size: 0.9rem;
+    }
+    
+    .competitor-comparison th,
+    .competitor-comparison td {
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .highlight-circle h3 {
+        font-size: 1rem;
+    }
+    
+    .feature-item {
+        padding: 1.5rem;
+    }
+    
+    .competitor-comparison table {
         font-size: 0.8rem;
     }
 } 
