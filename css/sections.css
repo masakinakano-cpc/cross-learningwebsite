@@ -100,6 +100,28 @@
     box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
 }
 
+/* メイン料金セクション（独立） */
+.main-price-section {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 2rem;
+}
+
+.main-price-section .main-price {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #1A4F8A;
+    margin: 0;
+    line-height: 1;
+}
+
+.main-price-section .price-period {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1A4F8A;
+    margin-left: 0.5rem;
+}
+
 .highlight-banner .main-price {
     font-size: 4.5rem;
     font-weight: 700;
@@ -415,15 +437,22 @@
 
 /* プラン列の色分け */
 .trial-col {
-    background: rgba(33, 150, 243, 0.08);
+    background: rgba(33, 150, 243, 0.15);
 }
 
 .premium-col {
-    background: rgba(26, 79, 138, 0.08);
+    background: rgba(26, 79, 138, 0.15);
 }
 
 .short-col {
-    background: rgba(108, 117, 125, 0.08);
+    background: rgba(108, 117, 125, 0.15);
+}
+
+/* クロスラーニング列の強調 */
+.trial-col {
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.2) 0%, rgba(33, 150, 243, 0.1) 100%);
+    border-left: 3px solid #2196F3;
+    border-right: 3px solid #2196F3;
 }
 
 .comparison-note {
