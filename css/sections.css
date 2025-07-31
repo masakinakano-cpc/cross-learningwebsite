@@ -26,12 +26,12 @@
 
 /* 料金ページ専用スタイル */
 
-/* ヒーローヘッダーセクション */
+/* ヒーローヘッダーセクション（SmartHR風） */
 .pricing-hero {
-    background: linear-gradient(135deg, #1A4F8A 0%, #0D2A54 100%);
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
     padding: 5rem 0;
     text-align: center;
-    color: white;
+    color: #1A4F8A;
     position: relative;
     overflow: hidden;
 }
@@ -54,17 +54,81 @@
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    color: #1A4F8A;
 }
 
 .hero-subtitle {
     font-size: 1.3rem;
-    opacity: 0.9;
+    color: #555;
     margin-bottom: 3rem;
-    color: #E3F2FD;
+}
+
+.hero-illustrations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto 3rem;
+}
+
+.illustration-left,
+.illustration-right {
+    width: 80px;
+    height: 80px;
+    background: #2196F3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.cost-highlight {
+    margin: 3rem 0;
+}
+
+.highlight-banner {
+    background: #FF6B35;
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+.highlight-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.highlight-banner p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.user-profiles {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.profile-circle {
+    width: 50px;
+    height: 50px;
+    background: #2196F3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
 }
 
 .hero-buttons {
@@ -631,6 +695,232 @@
     font-size: 1.2rem;
 }
 
+/* プラン概要セクション */
+.plan-overview {
+    padding: 5rem 0;
+    background: white;
+}
+
+.overview-table {
+    margin: 3rem 0;
+    overflow-x: auto;
+}
+
+.overview-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.overview-table th {
+    background: #1A4F8A;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.overview-table th:first-child {
+    text-align: left;
+    background: #0D2A54;
+}
+
+.overview-table td {
+    padding: 1.2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: middle;
+}
+
+.overview-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #1A4F8A;
+    background: #f8f9fa;
+}
+
+.overview-cta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.cta-left h3 {
+    color: #1A4F8A;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.cta-left p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cta-right {
+    text-align: center;
+}
+
+.cta-right .btn-primary {
+    background: #2196F3;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.cta-right .btn-primary:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
+}
+
+/* 各プランの詳細セクション */
+.plan-details {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.plan-detail-item {
+    margin-bottom: 4rem;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.detail-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.detail-text h3 {
+    font-size: 2rem;
+    color: #1A4F8A;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.detail-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.detail-features ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.detail-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.detail-features i.fa-check {
+    color: #4CAF50;
+    font-size: 1.1rem;
+    min-width: 20px;
+    margin-top: 0.1rem;
+}
+
+.detail-price {
+    margin-bottom: 2rem;
+}
+
+.detail-price .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FF6B35;
+}
+
+.detail-price .period {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.detail-text .btn-primary {
+    background: #2196F3;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.detail-text .btn-primary:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.3);
+}
+
+.detail-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder {
+    background: #f8f9fa;
+    border: 2px dashed #ddd;
+    border-radius: 15px;
+    padding: 3rem;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.image-placeholder i {
+    font-size: 4rem;
+    color: #2196F3;
+    margin-bottom: 1rem;
+}
+
+.image-placeholder p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* プラン別の色分け */
+.trial-detail {
+    border-left: 5px solid #2196F3;
+}
+
+.premium-detail {
+    border-left: 5px solid #FF6B35;
+}
+
+.short-detail {
+    border-left: 5px solid #9E9E9E;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     .hero-title {
@@ -763,5 +1053,79 @@
     
     .competitor-comparison table {
         font-size: 0.8rem;
+    }
+} 
+
+/* レスポンシブ対応の追加 */
+@media (max-width: 768px) {
+    .highlight-banner h2 {
+        font-size: 1.5rem;
+    }
+    
+    .overview-cta {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .detail-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .detail-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .detail-price .price {
+        font-size: 2rem;
+    }
+    
+    .image-placeholder {
+        padding: 2rem;
+    }
+    
+    .image-placeholder i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .highlight-banner {
+        padding: 1.5rem;
+    }
+    
+    .highlight-banner h2 {
+        font-size: 1.3rem;
+    }
+    
+    .overview-table {
+        margin: 2rem -1rem;
+    }
+    
+    .overview-table table {
+        font-size: 0.9rem;
+    }
+    
+    .overview-table th,
+    .overview-table td {
+        padding: 1rem 0.5rem;
+    }
+    
+    .detail-content {
+        padding: 1.5rem;
+    }
+    
+    .detail-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .detail-price .price {
+        font-size: 1.8rem;
     }
 } 
