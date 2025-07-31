@@ -20,37 +20,22 @@ function toggleFAQ(button) {
         // Open clicked FAQ
         answer.classList.add('active');
         toggle.classList.add('active');
-        toggle.textContent = '+';
+        toggle.textContent = '+'; // Keep it as '+' to indicate expand/collapse
     }
 }
 
 // Smooth scrolling for anchor links
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            const target = document.querySelector(href);
-            if (target) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = target.offsetTop - headerHeight;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
-}
-
-// DOMContentLoadedイベントで初期化
-document.addEventListener('DOMContentLoaded', function() {
-    initSmoothScroll();
-});
-
-// ページ読み込み完了後にも初期化
-window.addEventListener('load', function() {
-    initSmoothScroll();
 });
 
 // Animation on scroll
@@ -82,5 +67,55 @@ window.addEventListener('scroll', () => {
     } else {
         header.style.background = 'linear-gradient(135deg, #1A4F8A 0%, #0D2A54 100%)';
         header.style.backdropFilter = 'none';
+    }
+});
+
+// Main Hero Swiper Initialization
+new Swiper('.main-hero-swiper-container', {
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    speed: 1000,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+// Logo Swiper Initialization
+new Swiper('.logo-swiper-container', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 30,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+    },
+    speed: 3000,
+    freeMode: true,
+    freeModeMomentum: false,
+    breakpoints: {
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 60,
+        },
     }
 }); 

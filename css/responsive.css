@@ -12,6 +12,15 @@
     .feature-category-title { font-size: 1.8rem; }
     .answer-title { font-size: 2rem;}
     .client-logos h2 { font-size: 1.6rem; }
+    
+    /* 料金プラン */
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .pricing-section .section-title { font-size: 2.2rem; }
+    .price .amount { font-size: 2.2rem; }
+    .pricing-comparison h3 { font-size: 1.8rem; }
 }
 
 @media (max-width: 768px) {
@@ -35,6 +44,30 @@
     .voice-section p.lead { font-size: 1rem; margin-bottom: 2.5rem; }
     .pricing-card.featured { transform: none; }
     .pricing-card.featured:hover { transform: translateY(-10px); }
+    
+    /* 料金プラン */
+    .pricing-section { padding: 3rem 0; }
+    .pricing-section .section-title { font-size: 2rem; }
+    .pricing-section .section-subtitle { font-size: 1.1rem; }
+    .initial-cost-banner { 
+        padding: 0.8rem 1.5rem; 
+        font-size: 1rem; 
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .pricing-card { padding: 1.5rem; }
+    .plan-header h3 { font-size: 1.3rem; }
+    .price .amount { font-size: 2rem; }
+    .price .period { font-size: 1rem; }
+    .plan-features li { font-size: 0.9rem; }
+    .plan-conditions { padding: 1.2rem; }
+    .plan-conditions li { font-size: 0.8rem; }
+    .pricing-comparison h3 { font-size: 1.6rem; }
+    .pricing-comparison th { padding: 1rem 0.5rem; font-size: 1rem; }
+    .pricing-comparison td { padding: 1rem 0.5rem; font-size: 0.9rem; }
+    .note-box { padding: 1.5rem; }
+    .note-box h4 { font-size: 1.1rem; }
+    .note-box li { font-size: 0.9rem; }
     
     /* ヘッダー調整 */
     .nav-menu a { font-size: 0.85rem; }
@@ -85,4 +118,32 @@
     .main-content-intro, .answer-section, .features, .voice-section, .comparison, .faq, .case-studies, .cta-section, .client-logos, .courses, .pricing, .news-section {
         padding: 4rem 0; 
     }
+    
+    /* 料金プラン */
+    .pricing-section { padding: 2rem 0; }
+    .pricing-section .section-title { font-size: 1.8rem; }
+    .pricing-section .section-subtitle { font-size: 1rem; }
+    .initial-cost-banner { 
+        padding: 0.6rem 1rem; 
+        font-size: 0.9rem; 
+        border-radius: 25px;
+    }
+    .pricing-card { padding: 1.2rem; }
+    .plan-header h3 { font-size: 1.2rem; }
+    .price .amount { font-size: 1.8rem; }
+    .price .period { font-size: 0.9rem; }
+    .plan-badge { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+    .plan-features li { font-size: 0.85rem; gap: 0.5rem; }
+    .plan-features i { font-size: 1rem; }
+    .plan-conditions { padding: 1rem; }
+    .plan-conditions p { font-size: 0.9rem; }
+    .plan-conditions li { font-size: 0.75rem; }
+    .plan-footer .note { font-size: 0.8rem; }
+    .btn-primary { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
+    .pricing-comparison h3 { font-size: 1.4rem; }
+    .pricing-comparison th { padding: 0.8rem 0.3rem; font-size: 0.9rem; }
+    .pricing-comparison td { padding: 0.8rem 0.3rem; font-size: 0.8rem; }
+    .note-box { padding: 1.2rem; }
+    .note-box h4 { font-size: 1rem; }
+    .note-box li { font-size: 0.8rem; padding-left: 1rem; }
 } 
