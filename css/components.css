@@ -154,6 +154,8 @@
 .features-grid {
     display: grid;
     gap: 2.5rem;
+    align-items: start;
+    /* カードの高さを揃える */
 }
 
 /* 4要素専用（デフォルト: 2×2） */
@@ -181,13 +183,47 @@
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     border-top: 5px solid #1A4F8A;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    /* カードの高さを統一 */
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 79, 138, 0.02) 0%, rgba(255, 107, 53, 0.02) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-top-color: #FF6B35;
+}
+
+.feature-card:hover::before,
+.feature-card:focus-within::before {
+    opacity: 1;
+}
+
+/* アクセシビリティ向上のためのフォーカス状態 */
+.feature-card:focus-within {
+    outline: 2px solid #1A4F8A;
+    outline-offset: 2px;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-top-color: #FF6B35;
 }
 
 .feature-icon {
@@ -195,6 +231,14 @@
     margin-bottom: 1.5rem;
     color: #1A4F8A;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    color: #FF6B35;
 }
 
 .feature-title {
@@ -202,6 +246,13 @@
     margin-bottom: 1rem;
     color: #1A4F8A;
     font-weight: 700;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.feature-card:hover .feature-title {
+    color: #FF6B35;
 }
 
 .feature-card p {
@@ -209,6 +260,10 @@
     line-height: 1.8;
     color: #555;
     font-weight: 400;
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+    /* カードの高さを統一するため */
 }
 
 .feature-category-title {

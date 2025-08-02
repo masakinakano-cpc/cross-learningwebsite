@@ -26,6 +26,12 @@
         margin-right: auto;
         gap: 2rem;
     }
+
+    /* デスクトップでのホバー効果強化 */
+    .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
 }
 
 /* Voice Cards レスポンシブ設定 */
@@ -99,6 +105,12 @@
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
+    /* タブレットでのホバー効果調整 */
+    .feature-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
     .cta-content h2 {
         font-size: 2.3rem;
     }
@@ -166,6 +178,12 @@
     /* フォールバック */
     .features-grid:not(.features-grid-2):not(.features-grid-3):not(.features-grid-4) {
         grid-template-columns: 1fr;
+    }
+
+    /* モバイルでのホバー効果調整 */
+    .feature-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .courses-grid {
