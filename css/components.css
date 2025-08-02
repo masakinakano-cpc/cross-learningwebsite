@@ -153,8 +153,27 @@
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
+}
+
+/* 4要素専用（デフォルト: 2×2） */
+.features-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3要素専用（デフォルト: 3×1） */
+.features-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* 2要素専用（デフォルト: 2×1） */
+.features-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* 既存の自動調整も残しておく（フォールバック用） */
+.features-grid:not(.features-grid-2):not(.features-grid-3):not(.features-grid-4) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .feature-card {
