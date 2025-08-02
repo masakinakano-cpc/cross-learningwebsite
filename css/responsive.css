@@ -1,149 +1,516 @@
 /* レスポンシブデザイン */
+
+/* Voice Cards レスポンシブ設定 */
+/* デスクトップ: 1×4配置 (1200px以上) */
+@media (min-width: 1200px) {
+    .voice-cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+        margin: 2.5rem auto 0;
+    }
+}
+
+/* タブレット・中画面: 2×2配置 (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .voice-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* モバイル: 4×1配置 (767px以下) */
+@media (max-width: 767px) {
+    .voice-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
 @media (max-width: 992px) {
-    .main-hero-swiper-container { height: 400px; }
-    .main-content-intro h1 { font-size: 2.8rem; }
-    .main-content-intro p.intro-subtitle { font-size: 1.3rem; }
-    .section-title { font-size: 2.2rem; }
-    .features-grid, .key-points, .voice-cards-grid {
+    .main-hero-swiper-container {
+        height: 400px;
+    }
+
+    .main-content-intro h1 {
+        font-size: 2.8rem;
+    }
+
+    .main-content-intro p.intro-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .features-grid,
+    .key-points {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    .cta-content h2 { font-size: 2.3rem; }
-    .cta-content p { font-size: 1rem; }
-    .feature-category-title { font-size: 1.8rem; }
-    .answer-title { font-size: 2rem;}
-    .client-logos h2 { font-size: 1.6rem; }
-    
+
+    .cta-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+
+    .feature-category-title {
+        font-size: 1.8rem;
+    }
+
+    .answer-title {
+        font-size: 2rem;
+    }
+
+    .client-logos h2 {
+        font-size: 1.6rem;
+    }
+
     /* 料金プラン */
     .pricing-cards {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    .pricing-section .section-title { font-size: 2.2rem; }
-    .price .amount { font-size: 2.2rem; }
-    .pricing-comparison h3 { font-size: 1.8rem; }
+
+    .pricing-section .section-title {
+        font-size: 2.2rem;
+    }
+
+    .price .amount {
+        font-size: 2.2rem;
+    }
+
+    .pricing-comparison h3 {
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width: 768px) {
-    .main-hero-swiper-container { height: 300px; }
-    .main-content-intro h1 { font-size: 2.2rem; }
-    .main-content-intro p.intro-subtitle { font-size: 1.1rem; }
-    .key-points { grid-template-columns: 1fr; }
-    .features-grid { grid-template-columns: 1fr; }
-    .courses-grid { grid-template-columns: 1fr; }
-    .pricing-grid { grid-template-columns: 1fr; }
-    .comparison-table { overflow-x: auto; }
-    .comparison-table table { min-width: 600px; } 
-    .cta-buttons { flex-direction: column; align-items: center; }
-    .btn-primary, .btn-secondary { width: 90%; max-width: 300px; }
-    .answer-title { font-size: 1.8rem; }
-    .answer-box, .feature-card, .faq-item, .voice-card, .course-category, .pricing-card { padding: 1.8rem; }
-    .stat-number { font-size: 2rem; }
-    .feature-category-title { font-size: 1.6rem; }
-    .section-title { font-size: 2rem; }
-    .voice-section h2 { font-size: 2rem; }
-    .voice-section p.lead { font-size: 1rem; margin-bottom: 2.5rem; }
-    .pricing-card.featured { transform: none; }
-    .pricing-card.featured:hover { transform: translateY(-10px); }
-    
+    .main-hero-swiper-container {
+        height: 300px;
+    }
+
+    .main-content-intro h1 {
+        font-size: 2.2rem;
+    }
+
+    .main-content-intro p.intro-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .key-points {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table {
+        overflow-x: auto;
+    }
+
+    .comparison-table table {
+        min-width: 600px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .answer-title {
+        font-size: 1.8rem;
+    }
+
+    .answer-box,
+    .feature-card,
+    .faq-item,
+    .voice-card,
+    .course-category,
+    .pricing-card {
+        padding: 1.8rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .feature-category-title {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .voice-section h2 {
+        font-size: 2rem;
+    }
+
+    .voice-section p.lead {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .pricing-card.featured {
+        transform: none;
+    }
+
+    .pricing-card.featured:hover {
+        transform: translateY(-10px);
+    }
+
     /* 料金プラン */
-    .pricing-section { padding: 3rem 0; }
-    .pricing-section .section-title { font-size: 2rem; }
-    .pricing-section .section-subtitle { font-size: 1.1rem; }
-    .initial-cost-banner { 
-        padding: 0.8rem 1.5rem; 
-        font-size: 1rem; 
+    .pricing-section {
+        padding: 3rem 0;
+    }
+
+    .pricing-section .section-title {
+        font-size: 2rem;
+    }
+
+    .pricing-section .section-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .initial-cost-banner {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
         flex-direction: column;
         gap: 0.3rem;
     }
-    .pricing-card { padding: 1.5rem; }
-    .plan-header h3 { font-size: 1.3rem; }
-    .price .amount { font-size: 2rem; }
-    .price .period { font-size: 1rem; }
-    .plan-features li { font-size: 0.9rem; }
-    .plan-conditions { padding: 1.2rem; }
-    .plan-conditions li { font-size: 0.8rem; }
-    .pricing-comparison h3 { font-size: 1.6rem; }
-    .pricing-comparison th { padding: 1rem 0.5rem; font-size: 1rem; }
-    .pricing-comparison td { padding: 1rem 0.5rem; font-size: 0.9rem; }
-    .note-box { padding: 1.5rem; }
-    .note-box h4 { font-size: 1.1rem; }
-    .note-box li { font-size: 0.9rem; }
-    
+
+    .pricing-card {
+        padding: 1.5rem;
+    }
+
+    .plan-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .price .amount {
+        font-size: 2rem;
+    }
+
+    .price .period {
+        font-size: 1rem;
+    }
+
+    .plan-features li {
+        font-size: 0.9rem;
+    }
+
+    .plan-conditions {
+        padding: 1.2rem;
+    }
+
+    .plan-conditions li {
+        font-size: 0.8rem;
+    }
+
+    .pricing-comparison h3 {
+        font-size: 1.6rem;
+    }
+
+    .pricing-comparison th {
+        padding: 1rem 0.5rem;
+        font-size: 1rem;
+    }
+
+    .pricing-comparison td {
+        padding: 1rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .note-box {
+        padding: 1.5rem;
+    }
+
+    .note-box h4 {
+        font-size: 1.1rem;
+    }
+
+    .note-box li {
+        font-size: 0.9rem;
+    }
+
     /* ヘッダー調整 */
-    .nav-menu a { font-size: 0.85rem; }
-    .cta-button { font-size: 0.85rem; padding: 0.6rem 1.2rem; }
-    .logo { font-size: 1.8rem; }
+    .nav-menu a {
+        font-size: 0.85rem;
+    }
+
+    .cta-button {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .main-hero-swiper-container { height: 250px; }
-    .main-content-intro h1 { font-size: 1.8rem; }
-    .main-content-intro p.intro-subtitle { font-size: 0.9rem; }
-    .logo { font-size: 1.5rem; }
-    .cta-button { padding: 0.5rem 1rem; font-size: 0.8rem; }
-    .nav-menu { gap: 1rem; }
-    .nav-menu a { font-size: 0.8rem; }
-    .nav-menu { display: none; } /* モバイルではナビゲーションを非表示 */
-    .dropdown-content { 
-        position: static; 
-        box-shadow: none; 
-        border-radius: 0; 
-        min-width: auto; 
+    .main-hero-swiper-container {
+        height: 250px;
     }
-    .dropdown-content a { 
-        padding: 8px 16px; 
-        border-bottom: 1px solid #e0e0e0; 
+
+    .main-content-intro h1 {
+        font-size: 1.8rem;
     }
-    .section-title { font-size: 1.6rem; }
-    .answer-title { font-size: 1.6rem; }
-    .feature-title { font-size: 1.2rem; }
-    .feature-icon { font-size: 2.5rem; }
-    .faq-question { font-size: 0.9rem; padding: 1rem; }
-    .faq-answer { padding: 1rem; }
-    .cta-content h2 { font-size: 1.8rem; }
-    .feature-category-title { font-size: 1.4rem; }
-    .voice-card h3 { font-size: 1.2rem; }
-    .voice-card .card-icon { font-size: 2.5rem; }
-    .voice-card ul li { font-size: 0.85rem; padding-left: 1.2rem; }
-    .voice-section h2 { font-size: 1.8rem; }
-    .voice-section p.lead { font-size: 0.9rem; margin-bottom: 1.5rem; }
-    .course-category h3 { font-size: 1.2rem; }
-    .pricing-card h3 { font-size: 1.3rem; }
-    .price { font-size: 1.6rem; }
-    .news-grid { grid-template-columns: 1fr; }
-    .news-item { padding: 1.5rem; }
-    .news-title { font-size: 1.1rem; }
-    .news-pagination { flex-wrap: wrap; }
-    .page-link { width: 35px; height: 35px; font-size: 0.9rem; }
-    .main-content-intro, .answer-section, .features, .voice-section, .comparison, .faq, .case-studies, .cta-section, .client-logos, .courses, .pricing, .news-section {
-        padding: 4rem 0; 
+
+    .main-content-intro p.intro-subtitle {
+        font-size: 0.9rem;
     }
-    
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.8rem;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    /* モバイルではナビゲーションを非表示 */
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        min-width: auto;
+    }
+
+    .dropdown-content a {
+        padding: 8px 16px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .answer-title {
+        font-size: 1.6rem;
+    }
+
+    .feature-title {
+        font-size: 1.2rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+
+    .faq-question {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .faq-answer {
+        padding: 1rem;
+    }
+
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .feature-category-title {
+        font-size: 1.4rem;
+    }
+
+    .voice-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .voice-card .card-icon {
+        font-size: 2.5rem;
+    }
+
+    .voice-card ul li {
+        font-size: 0.85rem;
+        padding-left: 1.2rem;
+    }
+
+    .voice-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .voice-section p.lead {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .course-category h3 {
+        font-size: 1.2rem;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .price {
+        font-size: 1.6rem;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-item {
+        padding: 1.5rem;
+    }
+
+    .news-title {
+        font-size: 1.1rem;
+    }
+
+    .news-pagination {
+        flex-wrap: wrap;
+    }
+
+    .page-link {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .main-content-intro,
+    .answer-section,
+    .features,
+    .voice-section,
+    .comparison,
+    .faq,
+    .case-studies,
+    .cta-section,
+    .client-logos,
+    .courses,
+    .pricing,
+    .news-section {
+        padding: 4rem 0;
+    }
+
     /* 料金プラン */
-    .pricing-section { padding: 2rem 0; }
-    .pricing-section .section-title { font-size: 1.8rem; }
-    .pricing-section .section-subtitle { font-size: 1rem; }
-    .initial-cost-banner { 
-        padding: 0.6rem 1rem; 
-        font-size: 0.9rem; 
+    .pricing-section {
+        padding: 2rem 0;
+    }
+
+    .pricing-section .section-title {
+        font-size: 1.8rem;
+    }
+
+    .pricing-section .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .initial-cost-banner {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
         border-radius: 25px;
     }
-    .pricing-card { padding: 1.2rem; }
-    .plan-header h3 { font-size: 1.2rem; }
-    .price .amount { font-size: 1.8rem; }
-    .price .period { font-size: 0.9rem; }
-    .plan-badge { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
-    .plan-features li { font-size: 0.85rem; gap: 0.5rem; }
-    .plan-features i { font-size: 1rem; }
-    .plan-conditions { padding: 1rem; }
-    .plan-conditions p { font-size: 0.9rem; }
-    .plan-conditions li { font-size: 0.75rem; }
-    .plan-footer .note { font-size: 0.8rem; }
-    .btn-primary { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
-    .pricing-comparison h3 { font-size: 1.4rem; }
-    .pricing-comparison th { padding: 0.8rem 0.3rem; font-size: 0.9rem; }
-    .pricing-comparison td { padding: 0.8rem 0.3rem; font-size: 0.8rem; }
-    .note-box { padding: 1.2rem; }
-    .note-box h4 { font-size: 1rem; }
-    .note-box li { font-size: 0.8rem; padding-left: 1rem; }
-} 
+
+    .pricing-card {
+        padding: 1.2rem;
+    }
+
+    .plan-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .price .amount {
+        font-size: 1.8rem;
+    }
+
+    .price .period {
+        font-size: 0.9rem;
+    }
+
+    .plan-badge {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .plan-features li {
+        font-size: 0.85rem;
+        gap: 0.5rem;
+    }
+
+    .plan-features i {
+        font-size: 1rem;
+    }
+
+    .plan-conditions {
+        padding: 1rem;
+    }
+
+    .plan-conditions p {
+        font-size: 0.9rem;
+    }
+
+    .plan-conditions li {
+        font-size: 0.75rem;
+    }
+
+    .plan-footer .note {
+        font-size: 0.8rem;
+    }
+
+    .btn-primary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .pricing-comparison h3 {
+        font-size: 1.4rem;
+    }
+
+    .pricing-comparison th {
+        padding: 0.8rem 0.3rem;
+        font-size: 0.9rem;
+    }
+
+    .pricing-comparison td {
+        padding: 0.8rem 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    .note-box {
+        padding: 1.2rem;
+    }
+
+    .note-box h4 {
+        font-size: 1rem;
+    }
+
+    .note-box li {
+        font-size: 0.8rem;
+        padding-left: 1rem;
+    }
+}
