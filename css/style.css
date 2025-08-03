@@ -69,6 +69,50 @@ header {
     color: #E3F2FD !important;
 }
 
+/* スクロール時のヘッダー全体のスタイル */
+header.scrolled {
+    background: rgba(26, 79, 138, 0.95) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+header.scrolled .logo a {
+    color: #ffffff !important;
+}
+
+header.scrolled .logo a:hover {
+    color: #E3F2FD !important;
+}
+
+header.scrolled .nav-menu a {
+    color: #ffffff !important;
+}
+
+header.scrolled .nav-menu a:hover {
+    color: #E3F2FD !important;
+}
+
+header.scrolled .dropdown-content a {
+    color: #ffffff !important;
+}
+
+header.scrolled .dropdown-content a:hover {
+    color: #E3F2FD !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* スクロール時のCTAボタン */
+header.scrolled .cta-button {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
+    color: #1565C0 !important;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3) !important;
+}
+
+header.scrolled .cta-button:hover {
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%) !important;
+    color: #0D47A1 !important;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4) !important;
+}
+
 .nav-menu a::after {
     content: '';
     position: absolute;
@@ -140,6 +184,15 @@ header {
     top: 100%;
     left: 0;
     border: 1px solid rgba(187, 222, 251, 0.3);
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* スクロール時のドロップダウンメニュー */
+header.scrolled .dropdown-content {
+    background: rgba(26, 79, 138, 0.95) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 8px 25px rgba(26, 79, 138, 0.3) !important;
 }
 
 .dropdown:hover .dropdown-content {

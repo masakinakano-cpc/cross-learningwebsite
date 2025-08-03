@@ -62,27 +62,42 @@ document.querySelectorAll('.main-content-intro .intro-content, .answer-box, .voi
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     const logo = header.querySelector('.logo a');
-    const navLinks = header.querySelectorAll('.nav-menu a');
+    const navLinks = header.querySelectorAll('.nav-menu > li > a');
+    const dropdownLinks = header.querySelectorAll('.dropdown-content a');
 
     if (window.scrollY > 100) {
+        // ヘッダー背景をガラス効果に変更
         header.style.background = 'rgba(26, 79, 138, 0.95)';
         header.style.backdropFilter = 'blur(8px)';
+        header.classList.add('scrolled');
 
-        // テキストを白色に変更
+        // ロゴとナビゲーションリンクを白色に変更
         logo.style.color = '#ffffff';
         navLinks.forEach(link => {
             link.style.color = '#ffffff';
             link.classList.add('scrolled');
         });
+
+        // ドロップダウンメニューのリンクも白色に変更
+        dropdownLinks.forEach(link => {
+            link.style.color = '#ffffff';
+        });
     } else {
+        // 元のグラデーション背景に戻す
         header.style.background = 'linear-gradient(135deg, #1A4F8A 0%, #0D2A54 100%)';
         header.style.backdropFilter = 'none';
+        header.classList.remove('scrolled');
 
-        // 元の色に戻す
+        // ロゴとナビゲーションリンクを元の色に戻す
         logo.style.color = '#1565C0';
         navLinks.forEach(link => {
             link.style.color = '#1565C0';
             link.classList.remove('scrolled');
+        });
+
+        // ドロップダウンメニューのリンクも元の色に戻す
+        dropdownLinks.forEach(link => {
+            link.style.color = '#1565C0';
         });
     }
 });
