@@ -2,7 +2,7 @@
 function toggleFAQ(button) {
     const answer = button.nextElementSibling;
     const toggle = button.querySelector('.faq-toggle');
-    
+
     if (answer.classList.contains('active')) {
         answer.classList.remove('active');
         toggle.classList.remove('active');
@@ -16,7 +16,7 @@ function toggleFAQ(button) {
             item.classList.remove('active');
             item.textContent = '+';
         });
-        
+
         // Open clicked FAQ
         answer.classList.add('active');
         toggle.classList.add('active');
@@ -48,7 +48,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate-on-scroll');
-            observer.unobserve(entry.target); 
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
@@ -61,12 +61,29 @@ document.querySelectorAll('.main-content-intro .intro-content, .answer-box, .voi
 // Header background change on scroll
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
+    const logo = header.querySelector('.logo a');
+    const navLinks = header.querySelectorAll('.nav-menu a');
+
     if (window.scrollY > 100) {
-        header.style.background = 'rgba(26, 79, 138, 0.95)'; 
+        header.style.background = 'rgba(26, 79, 138, 0.95)';
         header.style.backdropFilter = 'blur(8px)';
+
+        // テキストを白色に変更
+        logo.style.color = '#ffffff';
+        navLinks.forEach(link => {
+            link.style.color = '#ffffff';
+            link.classList.add('scrolled');
+        });
     } else {
         header.style.background = 'linear-gradient(135deg, #1A4F8A 0%, #0D2A54 100%)';
         header.style.backdropFilter = 'none';
+
+        // 元の色に戻す
+        logo.style.color = '#1565C0';
+        navLinks.forEach(link => {
+            link.style.color = '#1565C0';
+            link.classList.remove('scrolled');
+        });
     }
 });
 
@@ -118,4 +135,4 @@ new Swiper('.logo-swiper-container', {
             spaceBetween: 60,
         },
     }
-}); 
+});
