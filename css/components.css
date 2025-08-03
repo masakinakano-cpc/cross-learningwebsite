@@ -157,6 +157,24 @@
     gap: 2.5rem;
 }
 
+/* 4要素専用のfeatures-gridクラス */
+.features-grid-4 {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3要素専用のfeatures-gridクラス */
+.features-grid-3 {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .feature-card {
     background: white;
     padding: 2.5rem;

@@ -26,6 +26,72 @@
     }
 }
 
+/* Features Grid レスポンシブ設定 */
+/* デスクトップ大画面: 4要素は1×4配置 (1200px以上) */
+@media (min-width: 1200px) {
+    .features-grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* タブレット・中画面: 2×2配置 (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .features-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* モバイル: 4×1配置 (767px以下) */
+@media (max-width: 767px) {
+    .features-grid-4 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* 3要素専用のレスポンシブ設定 */
+/* デスクトップ: 3×1配置 (1200px以上) */
+@media (min-width: 1200px) {
+    .features-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* タブレット・中画面: 2×1+1×1配置 (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .features-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .features-grid-3 .feature-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+/* モバイル: 3×1配置 (767px以下) */
+@media (max-width: 767px) {
+    .features-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .features-grid-3 .feature-card:last-child {
+        grid-column: 1;
+        max-width: none;
+        margin: 0;
+    }
+}
+
 @media (max-width: 992px) {
     .main-hero-swiper-container {
         height: 400px;
