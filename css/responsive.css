@@ -609,4 +609,52 @@
         padding: 2px 6px;
         top: -8px;
     }
+
+    /* モバイルでのアニメーション調整 */
+    .comparison-table.animate-on-scroll {
+        animation-duration: 0.8s;
+    }
+
+    .comparison-table.animate-on-scroll table {
+        animation-duration: 0.6s;
+        animation-delay: 0.2s;
+    }
+
+    .comparison-table.animate-on-scroll th,
+    .comparison-table.animate-on-scroll td {
+        animation-duration: 0.5s;
+    }
+
+    /* モバイルでの遅延時間短縮 */
+    .comparison-table.animate-on-scroll th:nth-child(1) {
+        animation-delay: 0.3s;
+    }
+
+    .comparison-table.animate-on-scroll th:nth-child(2) {
+        animation-delay: 0.4s;
+    }
+
+    .comparison-table.animate-on-scroll th:nth-child(3) {
+        animation-delay: 0.5s;
+    }
+
+    .comparison-table.animate-on-scroll th:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+
+    .comparison-table.animate-on-scroll td:nth-child(1) {
+        animation-delay: 0.4s;
+    }
+
+    .comparison-table.animate-on-scroll td:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+
+    .comparison-table.animate-on-scroll td:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+
+    .comparison-table.animate-on-scroll td:nth-child(4) {
+        animation-delay: 0.7s;
+    }
 }

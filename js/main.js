@@ -40,8 +40,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Animation on scroll
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.15,
+    rootMargin: '0px 0px -100px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -53,9 +53,29 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// comparison-table専用のオブザーバー（より早くトリガー）
+const tableObserverOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -150px 0px'
+};
+
+const tableObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-on-scroll');
+            tableObserver.unobserve(entry.target);
+        }
+    });
+}, tableObserverOptions);
+
 // Observe elements for animation
-document.querySelectorAll('.main-content-intro .intro-content, .answer-box, .voice-card, .feature-card, .faq-item, .stat-item, .comparison-table, .cta-content, .client-logos h2, .logo-swiper-container, .main-hero-swiper-container').forEach(el => {
+document.querySelectorAll('.main-content-intro .intro-content, .answer-box, .voice-card, .feature-card, .faq-item, .stat-item, .cta-content, .client-logos h2, .logo-swiper-container, .main-hero-swiper-container').forEach(el => {
     observer.observe(el);
+});
+
+// comparison-table専用のオブザーバー
+document.querySelectorAll('.comparison-table').forEach(el => {
+    tableObserver.observe(el);
 });
 
 // Header background change on scroll

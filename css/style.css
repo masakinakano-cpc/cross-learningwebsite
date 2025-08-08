@@ -269,9 +269,113 @@ footer p {
     }
 }
 
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInWithBlur {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+
 .animate-on-scroll {
     animation: fadeInUp 0.8s ease-out forwards;
     opacity: 0;
+}
+
+/* comparison-table専用アニメーション */
+.comparison-table.animate-on-scroll {
+    animation: fadeInWithBlur 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+.comparison-table.animate-on-scroll table {
+    animation: scaleIn 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.comparison-table.animate-on-scroll th {
+    animation: slideInFromLeft 0.8s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+.comparison-table.animate-on-scroll td {
+    animation: slideInFromRight 0.8s ease-out 0.7s forwards;
+    opacity: 0;
+}
+
+/* アニメーション遅延の段階的適用 */
+.comparison-table.animate-on-scroll th:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.comparison-table.animate-on-scroll th:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.comparison-table.animate-on-scroll th:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.comparison-table.animate-on-scroll th:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.comparison-table.animate-on-scroll td:nth-child(1) {
+    animation-delay: 0.7s;
+}
+
+.comparison-table.animate-on-scroll td:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.comparison-table.animate-on-scroll td:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.comparison-table.animate-on-scroll td:nth-child(4) {
+    animation-delay: 1.0s;
 }
 
 /* スムーズスクロール用の調整 */

@@ -482,7 +482,7 @@
     text-align: center;
     border-bottom: 1px solid rgba(26, 79, 138, 0.1);
     font-size: 0.95rem;
-    color: #333;
+    color: #212529;
     font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
@@ -496,9 +496,9 @@
 
 .comparison-table td:first-child {
     font-weight: 700;
-    color: #1A4F8A;
-    background: rgba(26, 79, 138, 0.03);
-    border-right: 2px solid rgba(26, 79, 138, 0.1);
+    color: #0D47A1;
+    background: rgba(26, 79, 138, 0.05);
+    border-right: 2px solid rgba(26, 79, 138, 0.15);
 }
 
 .comparison-table tr:nth-child(even) {
@@ -540,9 +540,9 @@
 }
 
 .highlight-col {
-    background: #B3E5FC !important;
+    background: #E3F2FD !important;
     font-weight: 700;
-    color: #1A4F8A;
+    color: #0D47A1;
 }
 
 /* ヘッダー行のhighlight-col特別スタイル */
