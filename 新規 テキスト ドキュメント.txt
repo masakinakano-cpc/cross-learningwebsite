@@ -224,7 +224,7 @@
         }
         
         .cta-button {
-            background: linear-gradient(45deg, #FF6B35, #F7931E); 
+            background: linear-gradient(45deg, #2196F3, #1976D2); 
             color: white;
             padding: 0.8rem 1.5rem; /* rem単位に変更 */
             border: none;
@@ -389,7 +389,7 @@
         }
 
         .main-content-intro .btn-primary { 
-            background: linear-gradient(45deg, #FF6B35, #F7931E);
+            background: linear-gradient(45deg, #2196F3, #1976D2);
             color: white;
             padding: 1rem 2.2rem;
             border: none;
@@ -455,7 +455,7 @@
             content: '✓'; 
             position: absolute;
             left: 0;
-            color: #FF6B35; 
+            color: #2196F3; 
             font-size: 1.5rem; /* rem単位に変更 */
             top: 50%;
             transform: translateY(-50%);
@@ -499,7 +499,7 @@
         .stat-number {
             font-size: 2.5rem; /* rem単位に変更 */
             font-weight: 700;
-            color: #FF6B35;
+            color: #2196F3;
             display: block;
             margin-bottom: 0.5rem; /* rem単位に変更 */
             text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
@@ -558,7 +558,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background-color: #FF6B35; 
+            background-color: #2196F3; 
             border-radius: 2px;
         }
         
@@ -574,7 +574,7 @@
             border-radius: 18px; 
             box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 5px solid #FF6B35; 
+            border-top: 5px solid #2196F3; 
         }
         
         .feature-card:hover {
@@ -676,7 +676,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background-color: #FF6B35;
+            background-color: #2196F3;
             border-radius: 2px;
         }
         .voice-section p.lead {
@@ -738,7 +738,7 @@
 
         .voice-card .card-icon {
             font-size: 2.5rem; /* rem単位に変更 */
-            color: #FF6B35;
+            color: #2196F3;
             margin-bottom: 1.5rem; /* rem単位に変更 */
             text-align: center;
             width: 100%;
@@ -959,7 +959,7 @@
         
         .faq-toggle.active {
             transform: rotate(45deg);
-            color: #FF6B35; 
+            color: #2196F3; 
         }
         
         /* 導入事例セクション */
@@ -1067,7 +1067,7 @@
         }
         
         .btn-primary {
-            background: linear-gradient(45deg, #FF6B35, #F7931E);
+            background: linear-gradient(45deg, #2196F3, #1976D2);
             color: white;
             padding: 1rem 2.2rem; /* rem単位に変更 */
             border: none;
@@ -1241,7 +1241,7 @@
         }
 
         .pricing-card.featured {
-            border-color: #FF6B35;
+            border-color: #2196F3;
             transform: scale(1.05);
             box-shadow: 0 20px 50px rgba(255, 107, 53, 0.2);
         }
@@ -1265,7 +1265,7 @@
         .price {
             font-size: 2rem;
             font-weight: 700;
-            color: #FF6B35;
+            color: #2196F3;
             margin-bottom: 1rem;
         }
 
@@ -1293,7 +1293,7 @@
             padding: 2rem;
             background: #f8f9fa;
             border-radius: 12px;
-            border-left: 5px solid #FF6B35;
+            border-left: 5px solid #2196F3;
         }
 
         .pricing-note p {
@@ -1733,38 +1733,38 @@
                     <tbody>
                         <tr>
                             <td><strong>業界特化</strong></td>
-                            <td class="highlight-col">製造・物流特化 <span class="check-mark">◎</span></td>
-                            <td>総合型 <span class="cross-mark">△</span></td>
-                            <td>総合型 <span class="cross-mark">△</span></td>
-                            <td>汎用的 <span class="cross-mark">△</span></td>
+                            <td class="highlight-col">製造・物流特化</td>
+                            <td>総合型</td>
+                            <td>総合型</td>
+                            <td>汎用的</td>
                         </tr>
                         <tr>
                             <td><strong>多言語対応</strong></td>
-                            <td class="highlight-col">5言語完全対応 <span class="check-mark">◎</span></td>
-                            <td>4言語 <span class="check-mark">○</span></td>
-                            <td>英語のみ <span class="cross-mark">△</span></td>
-                            <td>日本語のみ <span class="cross-mark">×</span></td>
+                            <td class="highlight-col">5言語完全対応</td>
+                            <td>4言語</td>
+                            <td>英語のみ</td>
+                            <td>日本語のみ</td>
                         </tr>
                         <tr>
                             <td><strong>多言語オプション費用</strong></td>
-                            <td class="highlight-col">追加費用なし <span class="check-mark">◎</span></td>
-                            <td>有料オプション <span class="cross-mark">×</span></td>
-                            <td>有料オプション <span class="cross-mark">×</span></td>
-                            <td>有料オプション <span class="cross-mark">×</span></td>
+                            <td class="highlight-col">追加費用なし</td>
+                            <td>有料オプション</td>
+                            <td>有料オプション</td>
+                            <td>有料オプション</td>
                         </tr>
                         <tr>
                             <td><strong>オリジナル講座制作</strong></td>
-                            <td class="highlight-col">制作込みサポート <span class="check-mark">◎</span></td>
-                            <td>基本機能のみ <span class="cross-mark">△</span></td>
-                            <td>オプション対応 <span class="cross-mark">△</span></td>
-                            <td>専門業者へ依頼 <span class="cross-mark">×</span></td>
+                            <td class="highlight-col">制作込みサポート</td>
+                            <td>基本機能のみ</td>
+                            <td>オプション対応</td>
+                            <td>専門業者へ依頼</td>
                         </tr>
                         <tr>
                             <td><strong>運用代行サービス</strong></td>
-                            <td class="highlight-col">フル代行 <span class="check-mark">◎</span></td>
-                            <td>サポートあり <span class="check-mark">○</span></td>
-                            <td>基本サポート <span class="cross-mark">△</span></td>
-                            <td>なし <span class="cross-mark">×</span></td>
+                            <td class="highlight-col">フル代行</td>
+                            <td>サポートあり</td>
+                            <td>基本サポート</td>
+                            <td>なし</td>
                         </tr>
                         <tr>
                             <td><strong>料金体系</strong></td>
@@ -1775,10 +1775,10 @@
                         </tr>
                         <tr>
                             <td><strong>専門性</strong></td>
-                            <td class="highlight-col">製造現場特化 <span class="check-mark">◎</span></td>
-                            <td>総合カバー <span class="check-mark">○</span></td>
-                            <td>総合カバー <span class="check-mark">○</span></td>
-                            <td>汎用的 <span class="cross-mark">△</span></td>
+                            <td class="highlight-col">製造現場特化</td>
+                            <td>総合カバー</td>
+                            <td>総合カバー</td>
+                            <td>汎用的</td>
                         </tr>
                     </tbody>
                 </table>

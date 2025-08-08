@@ -54,7 +54,7 @@ app.use((req, res) => {
                 <style>
                     body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
                     h1 { color: #1A4F8A; }
-                    a { color: #FF6B35; text-decoration: none; }
+                    a { color: #2196F3; text-decoration: none; }
                     a:hover { text-decoration: underline; }
                 </style>
             </head>

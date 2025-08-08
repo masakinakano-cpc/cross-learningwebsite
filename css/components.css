@@ -344,7 +344,7 @@
 
 .voice-card .card-icon {
     font-size: 2.5rem;
-    color: #FF6B35;
+    color: #2196F3;
     margin-bottom: 1.5rem;
     text-align: center;
     width: 100%;
@@ -425,40 +425,88 @@
 }
 
 .comparison-table {
-    background: white;
-    border-radius: 18px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 50px rgba(26, 79, 138, 0.15);
     margin: 3rem 0;
-    border: 1px solid #e0e0e0;
+    border: 2px solid rgba(26, 79, 138, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.comparison-table::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1A4F8A 0%, #FF6B35 50%, #2196F3 100%);
+    z-index: 1;
+}
+
+.comparison-table:hover {
+    box-shadow: 0 25px 60px rgba(26, 79, 138, 0.2);
+    transform: translateY(-2px);
 }
 
 .comparison-table table {
     width: 100%;
     border-collapse: collapse;
+    position: relative;
+    z-index: 2;
 }
 
 .comparison-table th {
-    background: #1A4F8A;
+    background: linear-gradient(135deg, #1A4F8A 0%, #1565C0 100%);
     color: white;
-    padding: 1.2rem;
+    padding: 1.5rem 1.2rem;
     text-align: center;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.05rem;
     white-space: nowrap;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.comparison-table th:hover {
+    background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+    transform: translateY(-1px);
 }
 
 .comparison-table td {
-    padding: 1rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     text-align: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(26, 79, 138, 0.1);
     font-size: 0.95rem;
-    color: #444;
-    font-weight: 400;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.comparison-table td:hover {
+    background: rgba(26, 79, 138, 0.05);
+    color: #1A4F8A;
+    font-weight: 600;
+}
+
+.comparison-table td:first-child {
+    font-weight: 700;
+    color: #1A4F8A;
+    background: rgba(26, 79, 138, 0.03);
+    border-right: 2px solid rgba(26, 79, 138, 0.1);
 }
 
 .comparison-table tr:nth-child(even) {
-    background: #f8f9fa;
+    background: linear-gradient(135deg, rgba(26, 79, 138, 0.02) 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+.comparison-table tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .comparison-table tr:last-child td {
@@ -467,76 +515,40 @@
 
 .check-mark {
     color: #28A745;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(40, 167, 69, 0.3);
+    transition: all 0.3s ease;
+}
+
+.check-mark:hover {
+    transform: scale(1.2);
+    color: #20C997;
 }
 
 .cross-mark {
     color: #DC3545;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 700;
-}
-
-.highlight-col {
-    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%) !important;
-    font-weight: 700;
-    color: #1A4F8A;
-    position: relative;
-    border: 2px solid #2196F3;
-    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+    text-shadow: 1px 1px 2px rgba(220, 53, 69, 0.3);
     transition: all 0.3s ease;
 }
 
-.highlight-col::before {
-    content: '★';
-    position: absolute;
-    top: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #FF6B35;
-    color: white;
-    font-size: 0.8rem;
-    padding: 2px 6px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+.cross-mark:hover {
+    transform: scale(1.2);
+    color: #E74C3C;
 }
 
-.highlight-col:hover {
-    background: linear-gradient(135deg, #BBDEFB 0%, #90CAF9 100%) !important;
-    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
-    transform: translateY(-2px);
+.highlight-col {
+    background: #B3E5FC !important;
+    font-weight: 700;
+    color: #1A4F8A;
 }
 
 /* ヘッダー行のhighlight-col特別スタイル */
 .comparison-table th.highlight-col {
-    background: linear-gradient(135deg, #1A4F8A 0%, #1565C0 100%) !important;
+    background: linear-gradient(135deg, #00897B 0%, #26A69A 100%) !important;
     color: white;
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    border: 2px solid #FF6B35;
-    box-shadow: 0 4px 15px rgba(26, 79, 138, 0.4);
-}
-
-.comparison-table th.highlight-col::before {
-    content: '推奨';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #FF6B35;
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.4);
-    letter-spacing: 0.5px;
-}
-
-.comparison-table th.highlight-col:hover {
-    background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%) !important;
-    box-shadow: 0 6px 20px rgba(26, 79, 138, 0.5);
-    transform: translateY(-2px);
 }
 
 /* FAQセクション */
@@ -624,7 +636,7 @@
 
 .faq-toggle.active {
     transform: rotate(45deg);
-    color: #FF6B35;
+    color: #2196F3;
 }
 
 /* 導入事例セクション */

@@ -184,10 +184,27 @@
 
     .comparison-table {
         overflow-x: auto;
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(26, 79, 138, 0.12);
     }
 
     .comparison-table table {
         min-width: 600px;
+    }
+
+    .comparison-table th {
+        padding: 1.2rem 1rem;
+        font-size: 1rem;
+    }
+
+    .comparison-table td {
+        padding: 1rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .check-mark,
+    .cross-mark {
+        font-size: 1.1rem;
     }
 
     .cta-buttons {
