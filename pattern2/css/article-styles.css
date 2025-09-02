@@ -1,0 +1,211 @@
+/* 記事形式LP用スタイル */
+
+.article-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #1A4F8A;
+}
+
+.article-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1A4F8A;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.article-category {
+    background: #1A4F8A;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+}
+
+.article-lead {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+    border-left: 4px solid #1A4F8A;
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.article-section {
+    margin-bottom: 3rem;
+}
+
+.article-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1A4F8A;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.article-section h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin: 2rem 0 1rem 0;
+}
+
+.article-section h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1A4F8A;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.article-section p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #856404;
+    margin: 1rem 0;
+}
+
+.effect-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.effect-list li {
+    background: #f8f9fa;
+    border-left: 4px solid #1A4F8A;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.effect-list li strong {
+    color: #1A4F8A;
+}
+
+.step-list {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.step-list li {
+    counter-increment: step-counter;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 4rem;
+}
+
+.step-list li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+    background: #1A4F8A;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.step-list li strong {
+    color: #1A4F8A;
+}
+
+.faq-item {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.faq-item h4 {
+    margin-top: 0;
+    color: #1A4F8A;
+    font-size: 1.1rem;
+}
+
+.faq-item p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .article-main {
+        padding: 1rem 0.5rem;
+    }
+    
+    .article-title {
+        font-size: 1.8rem;
+    }
+    
+    .article-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .article-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .article-lead {
+        padding: 1.5rem;
+    }
+    
+    .lead-text {
+        font-size: 1rem;
+    }
+    
+    .step-list li {
+        padding-left: 3rem;
+    }
+    
+    .step-list li::before {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.8rem;
+    }
+}
