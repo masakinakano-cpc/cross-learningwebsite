@@ -1,0 +1,747 @@
+/* パターン2 - レスポンシブスタイル */
+
+/* タブレット対応 (768px - 1024px) */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-3xl);
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .problems-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .strengths-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* モバイル対応 (最大768px) */
+@media (max-width: 768px) {
+    :root {
+        --spacing-xs: 0.25rem;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 0.75rem;
+        --spacing-lg: 1rem;
+        --spacing-xl: 1.5rem;
+        --spacing-2xl: 2rem;
+        --spacing-3xl: 2.5rem;
+        --spacing-4xl: 3rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* ナビゲーション */
+    .nav-container {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top: 1px solid var(--gray-200);
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        gap: var(--spacing-md);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* ヒーローセクション */
+    .hero {
+        min-height: 80vh;
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .hero-container {
+        padding: 0 var(--spacing-md);
+        gap: var(--spacing-2xl);
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: center;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    /* 信頼性セクション */
+    .trust-title {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+    
+    .trust-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .trust-logos {
+        gap: var(--spacing-lg);
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+    
+    /* 課題解決セクション */
+    .problems-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .problem-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .problem-title {
+        font-size: 1.25rem;
+    }
+    
+    .problem-description {
+        font-size: 0.95rem;
+    }
+    
+    /* 強みセクション */
+    .strengths-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .strength-card {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-lg);
+    }
+    
+    .strength-number {
+        align-self: center;
+    }
+    
+    .strength-title {
+        font-size: 1.25rem;
+    }
+    
+    /* 顧客の声セクション */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .testimonial-header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .testimonial-avatar img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .testimonial-name {
+        font-size: 1.125rem;
+    }
+    
+    /* 料金セクション */
+    .pricing-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .plan-name {
+        font-size: 1.25rem;
+    }
+    
+    .price-value {
+        font-size: 1.25rem;
+    }
+    
+    /* CTAセクション */
+    .cta-title {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+    
+    .cta-description {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: center;
+    }
+    
+    .btn-cta-primary,
+    .btn-cta-secondary {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    /* フッター */
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .link-group {
+        text-align: center;
+    }
+}
+
+/* 小さいモバイル対応 (最大480px) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .trust-title {
+        font-size: 1.5rem;
+    }
+    
+    .cta-title {
+        font-size: 1.5rem;
+    }
+    
+    .problem-icon,
+    .strength-number {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .problem-icon i,
+    .strength-number {
+        font-size: 1.25rem;
+    }
+    
+    .testimonial-avatar img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo-img {
+        height: 30px;
+    }
+}
+
+/* 横画面モバイル対応 */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+        align-items: center;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    
+    .hero-actions {
+        flex-direction: row;
+        gap: var(--spacing-sm);
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.9rem;
+    }
+}
+
+/* 高解像度ディスプレイ対応 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo-img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* 印刷対応 */
+@media print {
+    .navbar,
+    .hero-bg,
+    .cta-section,
+    .footer {
+        display: none;
+    }
+    
+    .hero {
+        background: white;
+        color: black;
+        min-height: auto;
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .hero-title {
+        color: black;
+    }
+    
+    .section-title {
+        color: black;
+    }
+    
+    .problem-card,
+    .strength-card,
+    .testimonial-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* アクセシビリティ対応 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .hero-particles {
+        animation: none;
+    }
+    
+    .progress-fill {
+        animation: none;
+    }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gray-50: #0f172a;
+        --gray-100: #1e293b;
+        --gray-200: #334155;
+        --gray-300: #475569;
+        --gray-400: #64748b;
+        --gray-500: #94a3b8;
+        --gray-600: #cbd5e1;
+        --gray-700: #e2e8f0;
+        --gray-800: #f1f5f9;
+        --gray-900: #f8fafc;
+    }
+    
+    body {
+        background-color: var(--gray-50);
+        color: var(--gray-800);
+    }
+    
+    .navbar {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom-color: var(--gray-200);
+    }
+    
+    .problem-card,
+    .strength-card,
+    .testimonial-card,
+    .pricing-card {
+        background: var(--gray-100);
+        border-color: var(--gray-200);
+    }
+    
+    .trust-section,
+    .strengths-section,
+    .pricing-section {
+        background: var(--gray-100);
+    }
+}
+
+/* フォーカス表示の改善 */
+@media (any-hover: hover) {
+    .nav-link:focus,
+    .btn-primary:focus,
+    .btn-secondary:focus,
+    .btn-demo:focus,
+    .btn-cta-primary:focus,
+    .btn-cta-secondary:focus,
+    .btn-pricing:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+}
+
+/* タッチデバイス対応 */
+@media (hover: none) and (pointer: coarse) {
+    .problem-card:hover,
+    .strength-card:hover,
+    .testimonial-card:hover {
+        transform: none;
+    }
+    
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .btn-cta-primary:hover,
+    .btn-cta-secondary:hover,
+    .btn-pricing:hover {
+        transform: none;
+    }
+    
+    .nav-link:hover {
+        color: var(--gray-600);
+    }
+    
+    .nav-link.active {
+        color: var(--primary-color);
+    }
+}
+
+/* 新セクションのレスポンシブ対応 */
+
+/* 信頼性バナー */
+@media (max-width: 768px) {
+    .trust-banner-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .trust-stats {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .trust-stats .stat-item {
+        font-size: 0.8rem;
+    }
+}
+
+/* 大手導入企業セクション */
+@media (max-width: 768px) {
+    .logos-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .logos-header p {
+        font-size: 1rem;
+    }
+    
+    .logos-grid {
+        gap: var(--spacing-lg);
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+    
+    .security-badges {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .badge-item {
+        font-size: 0.8rem;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+}
+
+/* 業界特化教材セクション */
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .feature-item {
+        padding: var(--spacing-lg);
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .feature-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .feature-item h3 {
+        font-size: 1.25rem;
+    }
+    
+    .feature-tags,
+    .language-flags {
+        gap: var(--spacing-xs);
+    }
+    
+    .tag,
+    .flag {
+        font-size: 0.8rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .device-icons {
+        gap: var(--spacing-md);
+        font-size: 1.5rem;
+    }
+}
+
+/* コストメリットセクション */
+@media (max-width: 768px) {
+    .comparison-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .comparison-header h3 {
+        font-size: 1.25rem;
+    }
+    
+    .comparison-item {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+    
+    .item-costs {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .roi-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .roi-item {
+        padding: var(--spacing-lg);
+    }
+    
+    .roi-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .roi-icon i {
+        font-size: 1.25rem;
+    }
+    
+    .roi-item h4 {
+        font-size: 1.125rem;
+    }
+}
+
+/* 運用代行サービスセクション */
+@media (max-width: 768px) {
+    .support-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .support-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .support-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .support-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .support-card h3 {
+        font-size: 1.125rem;
+    }
+    
+    .support-guarantee {
+        padding: var(--spacing-lg);
+    }
+    
+    .guarantee-content h3 {
+        font-size: 1.25rem;
+    }
+    
+    .guarantee-list {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .guarantee-list li {
+        font-size: 0.9rem;
+    }
+}
+
+/* 顧客の声セクション（アップグレード版） */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .testimonial-header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .testimonial-avatar img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .testimonial-name {
+        font-size: 1.125rem;
+    }
+    
+    .result-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .result-stats .stat-number {
+        font-size: 1.5rem;
+    }
+}
+
+/* 料金セクション（アップグレード版） */
+@media (max-width: 768px) {
+    .pricing-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .plan-name {
+        font-size: 1.25rem;
+    }
+    
+    .price-value {
+        font-size: 1.25rem;
+    }
+    
+    .pricing-features li {
+        font-size: 0.9rem;
+    }
+}
+
+/* 小さいモバイル対応（最大480px） */
+@media (max-width: 480px) {
+    .trust-badge {
+        font-size: 0.8rem;
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+    
+    .hero-guarantee {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .guarantee-item {
+        font-size: 0.8rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .logos-header h2 {
+        font-size: 1.25rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .feature-item h3,
+    .support-card h3 {
+        font-size: 1rem;
+    }
+    
+    .comparison-header h3 {
+        font-size: 1.125rem;
+    }
+    
+    .roi-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-title {
+        font-size: 1.5rem;
+    }
+}

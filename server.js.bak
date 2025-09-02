@@ -45,14 +45,6 @@ app.get('/news', (req, res) => {
     res.sendFile(path.join(__dirname, 'news.html'));
 });
 
-
-// パターン2のルーティング
-app.get('/pattern2', (req, res) => {
-    res.sendFile(path.join(__dirname, 'pattern2', 'index.html'));
-});
-
-// パターン2の静的ファイル配信
-app.use('/pattern2', express.static(path.join(__dirname, 'pattern2')));
 // 404エラーハンドリング
 app.use((req, res) => {
     res.status(404).send(`
