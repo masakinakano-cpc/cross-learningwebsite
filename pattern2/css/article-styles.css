@@ -9,7 +9,11 @@
 }
 
 .article-header {
+    position: static !important;
+    top: auto !important;
+    z-index: auto !important;
     text-align: center;
+    margin-top: 2rem;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 2px solid #1A4F8A;
@@ -43,6 +47,7 @@
     background: #f8f9fa;
     padding: 2rem;
     border-radius: 0.5rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
     border-left: 4px solid #1A4F8A;
 }
@@ -55,6 +60,7 @@
 }
 
 .article-section {
+    margin-top: 2rem;
     margin-bottom: 3rem;
 }
 
